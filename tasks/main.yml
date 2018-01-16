@@ -1,0 +1,7 @@
+---
+# This playbook modifies the apt sources to use the NZ mirrors
+
+- name: modify the apt sources
+  become: yes
+  become_user: root
+  command: sed -i.bak "s#http://[^\ ]*#mirror://mirrors.ubuntu.com/NZ.txt#g" /etc/apt/sources.list

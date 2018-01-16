@@ -1,0 +1,5 @@
+---
+- name: test modification of apt sources
+  hosts: all
+  roles:
+    - nz-apt-ansible
